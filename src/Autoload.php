@@ -2,17 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Pest\PluginName;
+namespace PluginPlay;
 
-use Pest\Plugin;
-use PHPUnit\Framework\TestCase;
+use Pest\Support\Container;
 
-Plugin::uses(Example::class);
-
-/**
- * @return TestCase
- */
-function example(string $argument)
+function motivationalQuote(): void
 {
-    return test()->example(...func_get_args()); // @phpstan-ignore-line
+    Container::getInstance()->get(Plugin::class)->motivationalQuote();
 }

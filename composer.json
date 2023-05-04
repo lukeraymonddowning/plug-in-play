@@ -1,6 +1,6 @@
 {
-    "name": "pestphp/pest-plugin-template",
-    "description": "My awesome plugin",
+    "name": "lukeraymonddowning/plug-in-play",
+    "description": "Motivational quotes for when testing is hard.",
     "keywords": [
         "php",
         "framework",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pest\\PluginName\\": "src/"
+            "PluginPlay\\": "src/"
         },
         "files": [
             "src/Autoload.php"
@@ -46,5 +46,12 @@
             "@test:types",
             "@test:unit"
         ]
+    },
+    "extra": {
+        "pest": {
+            "plugins": [
+                "PluginPlay\\Plugin"
+            ]
+        }
     }
 }

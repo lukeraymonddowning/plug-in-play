@@ -1,11 +1,12 @@
 <?php
 
-use function Pest\PluginName\example;
+use function PluginPlay\motivationalQuote;
 
 it('may be accessed on the `$this` closure', function () {
-    $this->example('foo');
+    motivationalQuote();
+    expect(true)->toBeTrue();
 });
 
 it('may be accessed as function', function () {
-    example('foo');
+    expect('foo')->toBe('bar');
 });
